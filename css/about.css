@@ -108,6 +108,7 @@ header .logo img{
 /* 图开始 */
 .banner-img{
 	width: 100%;
+	position: relative;
 }
 .banner-img .container{
     padding: 0;
@@ -116,8 +117,16 @@ header .logo img{
     padding-left: 0;
     padding-right: 0;
 }
+.big-img2{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	background: rgba(0,0,0,0.2);
+}
 .big-img{
-    background: url("../img/shop-banner.jpg");
+    background: url("../img/shop-banner.png");
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -128,10 +137,10 @@ header .logo img{
     font-size: 46px;
     line-height: 1.5;
     letter-spacing: 0;
-    color:#E3A5BF;
+    color:#fff;
     text-align: center;
-    padding-bottom: 160px;
-    padding-top: 160px;
+    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 

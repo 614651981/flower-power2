@@ -110,6 +110,7 @@ header .logo img{
 /* 图开始 */
 .banner-img{
 	width: 100%;
+	position: relative;
 }
 .banner-img .container{
     padding: 0;
@@ -118,8 +119,16 @@ header .logo img{
     padding-left: 0;
     padding-right: 0;
 }
+.big-img2{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	background: rgba(0,0,0,0.2);
+}
 .big-img{
-    background: url("../img/shop-banner.jpg");
+    background: url("../img/shop-banner.png");
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -130,10 +139,10 @@ header .logo img{
     font-size: 46px;
     line-height: 1.5;
     letter-spacing: 0;
-    color:#E3A5BF;
+    color:#fff;
     text-align: center;
-    padding-bottom: 160px;
-    padding-top: 160px;
+    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 
@@ -165,7 +174,7 @@ header .logo img{
 .huayu-right .hy-right{
 	background: #ffffff;
     /* margin-left: 30px; */
-    padding: 30px 30px 0;
+    padding-right: 30px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .hy-right .search{
@@ -344,6 +353,57 @@ header .logo img{
 	background:#E3A5BF;
 	float: left;
 	margin-right: 10px;
+}
+
+
+
+.xq-left {
+	margin-top: 50px;
+}
+.section-shop .products{
+	/*margin: 0 0 50px 0;*/
+	/* float: left;
+    width: 100%; */
+}
+.section-shop .products h3{
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #392a25;
+	margin-bottom: 30px;
+}
+.xq-left .xinpin li{
+	border-bottom: 0;
+	float: left;
+	width: 100%;
+	padding: 15px 0;
+}
+.xq-left .xinpin li a{
+	display:block;
+	font-weight: 400;
+	color: #474747;
+}
+.xq-left .xinpin li a img{
+	width: 80px;
+	height: 80px;
+	border: 2px solid #f1eeea;
+	float: left;
+	margin: 0 20px 0 0;
+}
+.xq-left .xinpin li a img:hover{
+	border: 2px solid #E3A5BF;
+}
+.xq-left .xinpin li a:hover{
+	color:#E3A5BF;
+}
+.xq-left .xinpin li del{
+	color: #cbcac8;
+	line-height: 40px;
+}
+.xq-left .xinpin li ins{
+	color:#E3A5BF;
+	text-decoration: none;
+	line-height: 40px;
 }
 
 /* footer开始 */

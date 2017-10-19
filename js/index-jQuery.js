@@ -10,21 +10,21 @@ $(function(){
 	        }else{  
 	            $("header").removeClass("fixed");
 	        }  
-    }); 
+    });
 
-    var navOffset=$(".head").offset().top;  
-	    $(window).scroll(function(){  
-	        var scrollPos=$(window).scrollTop();  
-	        if(scrollPos >=navOffset){  
-	            $(".head").addClass("fixed");  
-	        }else{  
-	            $(".head").removeClass("fixed");  
-	        }  
-    });  
+    var navOffset1=$(".head").offset().top;
+    $(window).scroll(function(){
+        var scrollPos=$(window).scrollTop();
+        if(scrollPos>navOffset){
+            $(".head").addClass("fixed");
+        }else{
+            $(".head").removeClass("fixed");
+        }
+    });
 
 
 
- 	//侧导航
+    //侧导航
 	$(".iconfont1").click(function() {
 		$(".section-aside").css("display","block");
 	});
@@ -34,10 +34,11 @@ $(function(){
 
 
 	//banner图轮播
- 	function rollOne(){  
-	    $(".big-img >ul").animate({marginLeft:"-1519px"},2000,"linear",function(){
+ 	function rollOne(){
+        let imgw1=$('.big-img').find('img').width();
+	    $(".big-img >ul").animate({marginLeft:`-${imgw1}px`},2000,"linear",function(){
 	        $(this).css({marginLeft:"0px"});  
-	        $(this).children("li").first().remove().clone(true).appendTo(".big-img >ul");  
+	        $(this).children("li").first().remove().clone(true).appendTo(".big-img >ul");
 	    });  
     }  
 	    var startRollOne=setInterval(rollOne,2000);  
@@ -52,9 +53,9 @@ $(function(){
 	function rolltwo(){
         let imgw=$('.products').find('img').width();
         console.log(imgw);
-    $(".hualist-ul").animate({marginLeft:`-${imgw}px`},2000,"linear",function(){
+    $(".hualist-u2").animate({marginLeft:`-${imgw}px`},2000,"linear",function(){
         $(this).css({marginLeft:"0px"});
-        $(this).children("li").first().remove().clone(true).appendTo(".hualist-ul");
+			$(this).children("li").first().remove().clone(true).appendTo(".hualist-u2");
     });
 	}
 	var startRolltwo=setInterval(rolltwo,2000);

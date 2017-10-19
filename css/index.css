@@ -32,7 +32,7 @@ body{
 header{
 	width: 100%;
 	transition: all 1s ease;
-	 background: #fff;
+	background: #fff;
 }
 header .logo{
 	padding-top: 17px;
@@ -506,6 +506,7 @@ header .logo img{
 	.section-banner{
 		height: 400px;
 	}
+
 }
 @media screen and (max-width: 992px) and (min-width: 768px){
 	.head{
