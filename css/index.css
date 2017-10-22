@@ -1,14 +1,6 @@
 @import url('base.css');
 
-body{
-	line-height: 24px;
-    font-weight: 400;
-    font-size: 16px;
-    color: #474747;
-    background: #fff;
-}
-
- /* 工作时间、登录、注册  */
+/* 工作时间、登录、注册  */
 /* .top{
 	background: #FFD1E5;
 }
@@ -32,7 +24,7 @@ body{
 header{
 	width: 100%;
 	transition: all 1s ease;
-	background: #fff;
+	background:url('../img/bg.png');
 }
 header .logo{
 	padding-top: 17px;
@@ -70,7 +62,7 @@ header .logo img{
 .head{
 	width: 100%;
 	display: none;
-	background: #fff;
+	background:url('../img/bg.png');
 }
 .head .nav2 .main-nav{
 	display: flex;
@@ -101,38 +93,39 @@ header .logo img{
     border-bottom: 2px solid #E3A5BF;  
     z-index: 199;  
 }  
-
-
+.head .nav2 .main-nav.active{
+	border-bottom:1px solid #ccc;  
+}
 
 /* 侧导航开始 */
-.section-aside{
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background:rgba(255,255,255,0.8);
-	z-index: 200;
+.aside{
+	width: 100%;
+	background:url('../img/bg.png');
 	display: none;
 }
-.section-aside .top{
-	position: absolute;
-	top: 10px;
-	left: 50%;
-	margin-left:-73px;
+.aside>li{
+	font-size: 14px;
+	font-weight: 600;
+	padding-top:10px;
+	text-align: center;
 }
-.section-aside ul{
-	margin-top:100px;
+.aside>li:last-child{
+	padding-bottom: 10px;
 }
-.section-aside ul li{
-	font-size: 16px;
-	padding: 10px  50px;
-}
-.section-aside ul li a{
+.aside>li a{
 	color: #474747;
 }
-.section-aside ul li a:hover{
+.aside.active{
+	display: block;
+}
+.aside>li:first-child a{
 	color:#E3A5BF;
 }
+.aside>li a:hover{
+	color:#E3A5BF;
+}
+
+
 
 
 

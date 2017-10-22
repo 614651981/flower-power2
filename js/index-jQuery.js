@@ -26,11 +26,12 @@ $(function(){
 
     //侧导航
 	$(".iconfont1").click(function() {
-		$(".section-aside").css("display","block");
+		$('.main-nav').toggleClass('active');
+		$(".aside").toggleClass('active');
 	});
-	$(".section-aside").dblclick(function() {
-		$(this).css("display","none");
-	});
+	
+	
+	
 
 
 	//banner图轮播
@@ -52,7 +53,6 @@ $(function(){
 
 	function rolltwo(){
         let imgw=$('.products').find('img').width();
-        console.log(imgw);
     $(".hualist-u2").animate({marginLeft:`-${imgw}px`},2000,"linear",function(){
         $(this).css({marginLeft:"0px"});
 			$(this).children("li").first().remove().clone(true).appendTo(".hualist-u2");
@@ -65,6 +65,21 @@ $(function(){
 		startRolltwo=setInterval(rolltwo,2000);
 	});
 
+
+	//花语  鼠标移入遮罩消失
+	let imgs=$('.xqa');
+	console.log(imgs)
+	imgs.each(function(index,element) {
+		$(this).mouseenter(function(){
+			$('.zhezhao').eq(index).css({display:'block'}).animate({right:0,top:0})
+		})
+  	});
+	
+  	imgs.each(function(index,element) {
+		$(this).mouseleave(function(){
+			$('.zhezhao').eq(index).animate({right:'-100%',top:'-100%'});
+		})
+  	});
 //最新优惠
 	let lis=$(".products");
 	let zhezhaos=$(".zhezhao");
@@ -79,7 +94,7 @@ $(function(){
 		})
 	}
 	
-
+//商品详情
 
 
 });

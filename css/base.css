@@ -9,11 +9,12 @@ a{
 	text-decoration: none;
 }
 body{
-	background:#fff;
+	/* background:#fff; */
 	line-height: 24px;
     font-weight: 400;
     font-size: 16px;
     color: #474747;
+    background:url('../img/bg.png');
 }
 
 

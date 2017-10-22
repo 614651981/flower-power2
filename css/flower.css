@@ -1,14 +1,9 @@
 @import url("base.css");
 
-
-body{
-	background: #fff;
-}
-
 header{
 	width: 100%;
 	transition: all 1s ease;
-	background: #fff;
+	background:url('../img/bg.png');
 }
 header .logo{
 	padding-top: 17px;
@@ -44,7 +39,7 @@ header .logo img{
 .head{
 	width: 100%;
 	display: none;
-	background: #fff;
+	background:url('../img/bg.png');
 }
 .head .nav2 .main-nav{
 	display: flex;
@@ -79,35 +74,39 @@ header .logo img{
     z-index: 199;  
 } 
 
+.head .nav2 .main-nav.active{
+	border-bottom:1px solid #ccc;  
+}
+
 /* 侧导航开始 */
-.section-aside{
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background:rgba(255,255,255,0.8);
-	z-index: 200;
+.aside{
+	width: 100%;
+	background:url('../img/bg.png');
 	display: none;
 }
-.section-aside .top{
-	position: absolute;
-	top: 10px;
-	left: 50%;
-	margin-left:-73px;
+.aside>li{
+	font-size: 14px;
+	font-weight: 600;
+	padding-top:10px;
+	text-align: center;
 }
-.section-aside ul{
-	margin-top:100px;
+.aside>li:last-child{
+	padding-bottom: 10px;
 }
-.section-aside ul li{
-	font-size: 16px;
-	padding: 10px  50px;
-}
-.section-aside ul li a{
+.aside>li a{
 	color: #474747;
 }
-.section-aside ul li a:hover{
+.aside.active{
+	display: block;
+}
+.aside>li:nth-of-type(2) a{
+    color:#E3A5BF;
+}
+.aside>li a:hover{
 	color:#E3A5BF;
 }
+
+
 
 /* 图开始 */
 .banner-img{
@@ -128,7 +127,7 @@ header .logo img{
 	position: absolute;
 	top:0;
 	left: 0;
-	background: rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.1);
 }
 .big-img{
     background: url("../img/shop-banner.png");
@@ -198,7 +197,6 @@ header .logo img{
 }
 
 
-
 /* 花语详情开始 */
 .section-huayu{
 	width: 100%;
@@ -221,6 +219,7 @@ header .logo img{
 	width: 100%;
 	height: 100%;
 	position: relative;
+	overflow: hidden;
 }
 .section-huayu img{
 	display: block;
@@ -232,51 +231,32 @@ header .logo img{
 	width: 100%;
 	height:100%;
 	position: absolute;
-	top: 0;
-	left:0;
-	background: rgba(255, 255, 255, 0.3);
+	top: -100%;
+	right:-100%;
+	background: rgba(0, 0, 0, 0.6);
 	display: none;
-	transition: all 0.5s ease;
+	padding: 50px 30px;
+	text-align: center;
 }
 
-.section-huayu .zhezhao .zz{
-	width: 100%;
-	height: 60px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	/*background: palevioletred;*/
-	position: absolute;
-	top:calc(50% - 30px);
-	left: 0;
+.section-huayu .zhezhao h4{
+	color: #fff;
+	font-size: 20px;
+	line-height: 46px;
 }
 .section-huayu .zhezhao p{
-	color: #474747;
-	font-size: 20px;
-	transition: all 1s ease;
+	color: #f2f2f2;
+	font-size: 14px;
+	line-height: 30px;
 }
-.section-huayu .zhezhao .zz a{
-	color:#474747;
-	margin-top: 40px;
-	font-size: 16px;
-	align-self: flex-end;
-	transition: all 1s ease;
-}
-
-.section-huayu li:hover .zhezhao{
-	display: block;
-}
-.section-huayu li .zhezhao:hover p{
-	transform: translateX(10px);
-}
-.section-huayu li .zhezhao:hover a{
-	transform: translateX(-10px);
+.section-huayu .zhezhao a{
+	color: #E3A5BF;
+	line-height: 20px;
 }
 
 
 /* footer开始 */
 .footer{
-	background: #fff;
 	line-height: 24px;
     font-weight: 400;
     font-size: 14px;
